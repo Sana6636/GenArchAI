@@ -89,6 +89,12 @@ GenArchAI aims to make architectural design and renovation more accessible by co
 
 This project is under active development.
 
+## 📚 Project Resources
+
+- 📄 [Project Report](./project%20report%20-%20sana.pdf)
+- 📊 [Project Presentation](./GenArchAI%20PROJECT-Final%20Review(S7)%20(2).pdf)
+- 🎥 [Working Demo Video](./demo_video.mp4)
+
 ## 👩‍💻 Author
 
 **Fathimma Sana**
