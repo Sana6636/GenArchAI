@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: '/api',
+    baseURL: `${import.meta.env.VITE_API_URL}/api`,
     timeout: 120000, // 120s — AI generation can take 90-120s on cold starts
     headers: { 'Content-Type': 'application/json' },
 });
@@ -10,8 +10,13 @@ const api = axios.create({
 api.interceptors.response.use(
     (response) => response.data,
     (error) => {
-        const message = error.response?.data?.error || error.message || 'Something went wrong';
+        const message =
+            error.response?.data?.error ||
+            error.message ||
+            'Something went wrong';
+
         console.error('API Error:', message);
+
         return Promise.reject({ message });
     }
 );
