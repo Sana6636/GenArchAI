@@ -5,7 +5,7 @@ class GroqService {
         this.apiKey = process.env.GROQ_API_KEY;
         this.isConfigured = !!this.apiKey;
         this.client = this.isConfigured ? new Groq({ apiKey: this.apiKey }) : null;
-        this.model = 'llama-3.1-8b-instant';
+        this.model = 'openai/gpt-oss-20b';
     }
 
     async chat(messages, projectContext = {}) {
